@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    
+    <title>Spotify</title>
+</head>
+    
+<body>
+    <div class="container">
+        <header class="menu-esquerdo-content">
+            <div class="pontos-group">
+                <i class="fas fa-ellipsis-h"></i>
+            </div>
+
+            <nav class="menu-principal">
+                
+                    <a href="/" class="menu-principal-group">
+                        <i class="fas fa-home"></i>
+                        <p>Ìnicio</p>
+                    </a>
+                    
+                    <a href="#Navegar" class="menu-principal-group">
+                        <i class="fas fa-ship"></i>
+                        <p>Navegar</p>
+                    </a>
+                    
+                    <a href="#Rádio" class="menu-principal-group">
+                        <i class="fas fa-broadcast-tower"></i>
+                        <p>Rádio</p>
+                    </a>
+            </nav>
+
+            <div class="scroll-content">
+                <nav class="menu-biblioteca">
+                    <h2>Sua Biblioteca</h2>
+
+                    <a href="#Feito para voce">
+                        <p>Feito para você</p>
+                    </a>
+                
+                    <a href="#Tocadas recentemente">
+                        <p>Tocadas recentemente</p>
+                    </a>
+                
+                    <a href="#Musicas Curtidas">
+                        <p>Músicas Curtidas</p>
+                    </a>
+                
+                    <a href="#Albuns">
+                        <p>Àlbuns</p>
+                    </a>
+                
+                    <a href="#Artistas">
+                        <p>Artistas</p>
+                    </a>
+                
+                    <a href="#Podcasts">
+                        <p>Podcasts</p>
+                    </a>
+                        
+                </nav>
+
+                <nav class="menu-playlist">
+                    <h2>Playlists</h2>
+
+                    
+                    <a href="#Infantil">
+                        <p>Infantil</p>
+                    </a>
+                
+                    <a href="#Toy Story">
+                        <p>Toy Story Playlist</p>
+                    </a>
+                
+                    <a href="#Louvores Internacionais">
+                        <p>Louvores Internacionais</p>
+                    </a>
+                
+                    <a href="#Louvores">
+                        <p>Louvores</p>
+                    </a>
+
+                    <a href="#Sertanejo">
+                        <p>Sertanejo</p>
+                    </a>
+
+                    <a href="#Funk">
+                        <p>Funk</p>
+                    </a>
+
+                    <a href="#Rap">
+                        <p>Rap</p>
+                    </a>
+                        
+                </nav>
+            </div>
+            
+        </header>
+
+        <main>
+            <div class="header-main-artistas">
+                <div class="esquerdo content">
+                    <div class="icones-passar-group">
+                        <i class="fas fa-angle-left"></i>   
+                        <i class="fas fa-angle-right"></i>
+                    </div>
+                    <div class="input-group input-search">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Buscar">
+                    </div>
+                </div>
+                <div class="direito content">
+                    <div class="user-group">
+                        <i class="far fa-user-circle"></i>
+                        <p>José Henrique</p>
+                    </div>
+                    <i class="fas fa-angle-down"></i>
+                </div>
+            </div>
+            <div class="main-artistas">
+                <h1>Artistas</h1>
+
+                <div class="filtro">
+                    <div class="input-group input-filtro">
+                        <i class="fas fa-search"></i>   
+                        <input type="text" placeholder="Filtrar">
+                    </div>
+                    <div class="select-group">
+                        <label for="classificar">Classificado por</label>
+                        <select name="" id="classificar">
+                            <option value="Nome">Nome</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="artistas-content">
+
+                    
+                        <a class="artista" onclick="playMusica()">
+                            <img src="/images/BonJovi-img.jpg" alt="Imagem da Banda Bon Jovi">
+                            <p>Bon Jonvi</p>
+                        </a>
+                        <a class="artista" onclick="playMusica()">
+                            <img src="/images/JeremyCamp-img.jpg" alt="Imagem de Jeremy Camp">
+                            <p>Jeremy Camp</p>
+                        </a>
+                        <a class="artista" onclick="playMusica()">
+                            <img src="/images/Kutless-img.jpg" alt="Imagem da banda Kutless">
+                            <p>Kutless</p>
+                        </a>
+                        <a class="artista" onclick="playMusica()">
+                            <img src="/images/LinkinPark-img.png" alt="Imagem da banda Linkin Park">
+                            <p>Linkin Park</p>
+                        </a>
+
+                        
+                    
+                </div>
+            </div>
+            
+        </main>
+
+        <footer class="menu-direito-content">
+            <h2>Veja o que seus amigos estão tocando</h2>
+            <button>Encontrar Amigos</button>
+            <div id="propaganda" class="propaganda" style="display: none">
+                
+                <video id="video" height="240" width="240">
+                    <source src="./videos/movie.mp4" type="video/mp4"> 
+                </video>
+                <button onclick="FecharVideo()" id="fechar">Fechar</button>
+            </div>
+            
+        </footer>
+    </div>
+</body>
+
+<script type="text/javascript" src="./scipts.js"></script>
+</html>

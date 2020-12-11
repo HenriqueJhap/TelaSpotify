@@ -1,0 +1,371 @@
+:root{
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    grid-template-rows: 100vh;
+    grid-template-columns: 2fr 8fr 3fr;
+    grid-template-areas: "menu-esquerdo conteudo-principal menu-direito";
+}
+
+.menu-esquerdo-content{
+
+    grid-area: menu-esquerdo;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+
+    padding-left: 1.6rem;
+    
+    background-color: #000;
+    box-shadow: 0 .4rem .4rem rgba(255, 255, 255, 0.25);
+    border-radius: 1px;
+
+    color: #fff;
+}
+
+.scroll-content{
+    height: 60%;
+    overflow: auto;
+}
+
+.scroll-content nav{
+    margin-bottom: 1rem;
+}
+
+.menu-esquerdo-content nav a{
+
+    display: flex;
+    
+    margin-bottom: 1.4rem;
+    margin-left: 1rem;
+    border-style: none;
+    color: #c1c1c1;
+    text-decoration: none;
+
+    transition: all .8s;
+}
+
+.menu-esquerdo-content nav a[href="#Artistas"]{
+    position: relative;
+    padding-left: .5rem;
+}
+
+.menu-esquerdo-content nav a[href="#Artistas"]:after{
+    height: 2rem;
+    width: 2px;
+    content: '';
+    
+    background: green;
+
+    position: absolute;
+    left: 0rem;
+    
+}
+
+.menu-esquerdo-content nav a:hover, .menu-esquerdo-content nav a[href="#Artistas"]{
+    color: #fff;
+}
+
+.menu-esquerdo-content nav a p{
+    font-size: 1.6rem;
+    font-style: none;
+    line-height: 1.8rem;
+    font-weight: 500;
+}
+
+.menu-esquerdo-content nav h2{
+    font-size: 1.6rem;
+    margin-bottom: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    text-transform: uppercase;
+    color: #a0a0a0;
+}
+
+.pontos-group{
+    font-size: 2rem;
+}
+
+.menu-principal-group{
+    display: flex;
+    align-items: center;
+}
+
+
+.menu-principal-group i{
+    font-size: 2rem;
+    width: 25%;
+}
+
+
+main{
+    grid-area: conteudo-principal;
+
+    width: 100%;        
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+
+    padding: 0 3rem;
+
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    box-shadow: 0 .4rem .4rem rgba(255, 255, 255, 0.25);
+    border-radius: 1px;
+
+    color: #fff;
+}
+
+main i{
+    font-size: 2.4rem;
+    color: #a0a0a0;
+    transition: all .5s;
+}
+
+main i:hover{
+    color: #fff;
+}
+
+.header-main-artistas{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.header-main-artistas .content{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 40%;
+}
+
+.icones-passar-group{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 10%;
+}
+
+.input-group{
+    position: relative;
+}
+
+.input-group i{
+    position: absolute;
+    left: 3px;
+    top: 4px;
+    font-size: 1.4rem;
+    
+}
+
+.input-group input{
+    height: 2.4rem;
+    width: 16rem;
+
+    border: none;
+    outline: none;
+
+    padding-left: 2.4rem;
+    text-align: left;
+
+    color: #000;
+}
+
+.input-search input{
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.user-group{
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.user-group p{
+    margin-left: 1rem;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    font-weight: 400;
+    color: #b1b1b1;
+}
+
+.main-artistas{
+    display: flex;
+    align-items: left;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.main-artistas h1{
+    margin-top: 5rem;
+
+    width: 100%;
+    text-align: left;
+
+    font-size: 4.8rem;
+    line-height: 6rem;
+    font-weight: 600;
+
+    border-bottom: 1px solid #000;
+}
+
+.main-artistas .filtro{
+    margin-top: 2rem;
+    border-bottom: 1px solid #000;
+    width: 100%;
+}
+
+.input-filtro input{
+    background-color: transparent;
+    color: #fff;
+}
+
+.input-filtro input:focus{
+    border-bottom: 1px solid #fff;
+}
+
+.select-group{
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+.select-group label{
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: bold;
+}
+
+.select-group select{
+    background-color: #555555;
+    width: 15rem;
+    height: 2.4rem;
+    margin-left: 1rem;
+    border: none;
+    border-radius: 2px;
+    color: #fff
+}
+
+.select-group select option{
+    color: #fff;
+}
+
+.artistas-content{
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 3rem;
+}
+
+.artista img:hover{
+    opacity: 0.8;
+
+    width: 18rem;
+    height: 18rem;
+
+    cursor: pointer;
+}
+
+.artista img{
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    transition: all 1s;
+}
+
+.artista p{
+    font-size: 1.6rem;
+    line-height: 2rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+    
+
+.menu-direito-content{
+    grid-area: menu-direito;
+
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: #000;
+    box-shadow: 0 .4rem .4rem rgba(255, 255, 255, 0.25);
+    border-radius: 1px;
+}
+
+.menu-direito-content h2{
+    font-size: 2rem;
+    line-height: 2.4rem;
+    color: #fff;
+    max-width: 20rem;
+
+    text-align: center;
+
+    margin-bottom: 6rem;
+}
+
+.menu-direito-content button{
+    height: 4rem;
+    width: 25rem;
+
+    outline: none;
+
+    background-color: #222222;
+    border: 1px solid #fff;
+    border-radius: 2rem;
+
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: #c7c7c7;
+    transition: all 0.4s;
+    
+}
+
+.menu-direito-content button:hover{
+    opacity: 0.8;
+    cursor: pointer;
+    
+}
+
+.menu-direito-content .propaganda{
+    display: none;
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menu-direito-content #fechar{
+    color:#fff;
+    background-color: red;
+    width: 15rem;
+}
+
